@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>嘿 老可爱</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            overflow: auto;
+        }
+
+        div {
+            width: 62%;
+            margin-top: 40%;
+            margin: auto;
+        }
+
+        div button {
+            background-color: #FFC0CB;
+            width: 80px;
+            height: 50px;
+            font-size: 20px;
+            color: white;
+
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            color: aquamarine;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>三点啦 下午茶时间的啦 </h1>
+        <p id="p"></p>
+        <button id="yes">吃</button>
+        <button id="no">不吃</button>
+    </div>
+
+    <script>
+        window.onload = function () {
+            var yes = document.getElementById("yes");
+            var no = document.getElementById("no");
+            var p = document.getElementById("p");
+            yes.onclick = function () {
+                alert("啊哈！！！活捉一只小佩奇, 但亲这边暂时只支持微信点餐哟");
+            }
+
+            var z = new Array("真的不吃吗？来点嘛", "就一点,就亿点点", "太阳这么好不煎饼果子来一套？", "台盖不考虑下", "西瓜榴莲螺蛳粉？", "肯德基麦当劳汉堡王", "啤酒烧烤小龙虾？", "烧烤啤酒小龙虾", "小龙虾啤酒烧烤？", "大爷来点嘛？", "来都来了,大过节的,不吃点？", "你吃了又不长肉,怕啥", "你吃饭的样子最好看了", "来嘛，来嘛，大爷吃点嘛");
+            var i = 0
+            no.onclick = function () {
+                p.innerHTML += z[i] + "<br>";
+                if (i > 12) {
+                    this.style.display = "none";
+                } else {
+                    i++;
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
